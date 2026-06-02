@@ -15,8 +15,8 @@ export const Column =({
 }: Props) => {
    const {setNodeRef} = useDroppable({id: status,});
    return (
-      <div ref={setNodeRef} className="w-80 bg-slate-100 rounded p-4">
-         <h2 className="font-bold-mb-4"> {title}</h2>
+      <div ref={setNodeRef} className="w-80 bg-slate-100 rounded-xl p-4 min-h-[500px] shadow-sm">
+         <h2 className="font-semibold text-lg mb-4"> {title}</h2>
          {jobs.map((job) => (
             <JobCard key={job.id} job={job}/>
          ))}
