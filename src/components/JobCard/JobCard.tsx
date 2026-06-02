@@ -76,14 +76,17 @@ export const JobCard = ({ job }: JobCardProps) => {
       style={style}
       className="bg-white p-4 mb-3 rounded-xl shadow border border-slate-200 hover:shadow-md"
     >
-      <div
-        {...listeners}
-        {...attributes}
-        className="cursor-grab select-none text-gray-400 mb-3 w-fit"
-      >
-        ⠿
+      <div className="flex justify-between items-start">
+        <h3 className="font-semibold text-lg">{job.position}</h3>
+        <div
+          {...listeners}
+          {...attributes}
+          className="cursor-grab select-none text-gray-400 mb-3 w-fit"
+        >
+          ⠿
+        </div>
       </div>
-      <h3 className="font-semibold text-lg">{job.position}</h3>
+
       <p className="text-slate-600 mt-1">{job.company}</p>
       {job.salary && <p>{job.salary}</p>}
 

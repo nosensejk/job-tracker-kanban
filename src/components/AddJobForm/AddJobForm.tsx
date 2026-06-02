@@ -49,7 +49,6 @@ export const AddJobForm = () => {
         className="border rounded-md px-3 py-2 w-64"
         onChange={(e) => setPosition(e.target.value)}
       />
-
       <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">Добавить</button>
     </form>
   );
