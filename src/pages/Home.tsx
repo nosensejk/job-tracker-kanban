@@ -6,7 +6,7 @@ import type { JobStatus } from "../types/job.ts";
 import { Statistics } from "../components/Statistics/Statistics.tsx";
 import { STATUSES } from "../constants/statuses.ts";
 import { useState } from "react";
-// 1. ИМПОРТ: Добавляем иконку Search
+
 import { Search } from "lucide-react";
 
 export const Home = () => {
@@ -28,13 +28,9 @@ export const Home = () => {
     );
   });
 
-  // ... (все импорты и логика остаются прежними)
-
   return (
     <div className="min-h-screen bg-slate-50/50 text-slate-900 antialiased selection:bg-blue-500/10">
-      {/* Паддинги уменьшаются на мобилках (px-3 py-4) и увеличиваются на десктопе */}
       <div className="max-w-[1600px] mx-auto px-3 py-4 md:px-8 md:py-8">
-        {/* Шапка: на мобилках всё в столбик (flex-col), центрируется. На десктопе — в линию */}
         <header className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between border-b border-slate-200 pb-5">
           <div className="text-center md:text-left">
             <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900">
@@ -45,7 +41,6 @@ export const Home = () => {
             </p>
           </div>
 
-          {/* Поиск и форма: на мобилках занимают 100% ширины (w-full) */}
           <div className="flex flex-col sm:flex-row gap-3 items-stretch w-full md:w-auto">
             <div className="relative w-full sm:w-72 md:w-80">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
@@ -63,18 +58,14 @@ export const Home = () => {
           </div>
         </header>
 
-        {/* Блок статистики (уже адаптирован под свайп в предыдущем шаге) */}
         <section className="mb-6">
           <Statistics />
         </section>
 
-        {/* Канбан-доска */}
         <main className="bg-transparent border-0 md:bg-white/50 md:backdrop-blur-sm md:border md:border-slate-200/80 md:rounded-2xl p-0 md:p-6 md:shadow-sm">
           <DndContext onDragEnd={handleDragEnd}>
-            {/* ЗАМЕНА: Вместо flex и overflow-x-auto используем сетку CSS Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-start min-h-[65vh]">
               {STATUSES.map((status) => (
-                /* ЗАМЕНА: Убрали фиксированную ширину w-[320px], теперь колонка адаптируется под размер ячейки сетки */
                 <div key={status.id} className="w-full">
                   <Column
                     title={status.title}

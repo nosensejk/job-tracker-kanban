@@ -18,7 +18,7 @@ export const Column = ({ title, status, jobs }: Props) => {
         isOver ? "bg-blue-50/40 border-blue-300" : ""
       }`}
     >
-      {/* Шапка колонки со счетчиком задач */}
+      
       <div className="flex justify-between items-center mb-4 px-1">
         <h2 className="font-semibold text-slate-800 tracking-tight">{title}</h2>
         <span className="bg-slate-200/70 text-slate-600 text-xs font-bold px-2 py-0.5 rounded-full shadow-inner">
@@ -26,7 +26,7 @@ export const Column = ({ title, status, jobs }: Props) => {
         </span>
       </div>
 
-      {/* Контейнер для карточек */}
+     
       <div className="flex-1 flex flex-col gap-3">
         {jobs.map((job) => (
           <JobCard key={job.id} job={job} />

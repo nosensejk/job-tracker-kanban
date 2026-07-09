@@ -54,7 +54,7 @@ export const AddJobForm = () => {
         className="bg-blue-600 text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:bg-blue-700 active:scale-[0.98] transition-all duration-200 cursor-pointer shadow-sm shadow-blue-500/10 flex items-center justify-center gap-2"
       >
         <span>Добавить</span>
-        {/* ЗАМЕНА: Иконка PlusCircle */}
+     
         <PlusCircle size={18} strokeWidth={2.5} />
       </button>
     </form>
