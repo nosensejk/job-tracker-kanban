@@ -72,7 +72,7 @@ export const Home = () => {
         <main className="bg-transparent border-0 md:bg-white/50 md:backdrop-blur-sm md:border md:border-slate-200/80 md:rounded-2xl p-0 md:p-6 md:shadow-sm">
           <DndContext onDragEnd={handleDragEnd}>
             {/* ЗАМЕНА: Вместо flex и overflow-x-auto используем сетку CSS Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start min-h-[65vh]">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-start min-h-[65vh]">
               {STATUSES.map((status) => (
                 /* ЗАМЕНА: Убрали фиксированную ширину w-[320px], теперь колонка адаптируется под размер ячейки сетки */
                 <div key={status.id} className="w-full">
